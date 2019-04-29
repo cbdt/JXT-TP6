@@ -1,0 +1,24 @@
+{
+  "name": "jxt-tp6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "initdb": "node initdb.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "config": "^3.1.0",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "helmet": "^3.16.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}

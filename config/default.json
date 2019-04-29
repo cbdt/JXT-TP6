@@ -1,0 +1,10 @@
+{
+  "App": {
+    "port": 3011
+  },
+  "Database": {
+    "port": 27017,
+    "host": "localhost",
+    "name": "jxt"
+  }
+}
