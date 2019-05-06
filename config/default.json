@@ -5,6 +5,8 @@
   "Database": {
     "port": 27017,
     "host": "localhost",
-    "name": "jxt"
+    "name": "jxt",
+    "username": "",
+    "password": "" 
   }
 }

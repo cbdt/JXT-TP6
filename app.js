@@ -7,13 +7,16 @@ const jwt = require('jsonwebtoken')
 
 require('dotenv').config()
 
-const { port: db_port, host: db_host, name: db_name } = config.get('Database')
+const { port: db_port, host: db_host, name: db_name, username: db_username, password: db_password } = config.get('Database')
 
-mongoose.connect(`mongodb://${db_host}:${db_port}/${db_name}`, {useNewUrlParser: true});
+if(db_username !== "" && db_password !== "") {
+  mongoose.connect(`mongodb://${db_username}:${db_password}@${db_host}:${db_port}/${db_name}`, {useNewUrlParser: true});
+} else {
+  mongoose.connect(`mongodb://${db_host}:${db_port}/${db_name}`, {useNewUrlParser: true});
+}
 
 const alertsRouter = require('./routes/alerts-v1')
 const alertsService = require('./services/alertsService')
-
 
 const app = express()
 
@@ -44,6 +47,5 @@ app.use(bodyParser.json())
 app.use(helmet({noSniff: true}))
 
 app.use('/alerts', alertsRouter(alertsService))
-
 
 exports.app = app

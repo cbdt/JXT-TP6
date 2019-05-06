@@ -29,7 +29,6 @@ router.get('/search', async (req, res) => {
   let { status } = req.query
   let alerts = await alertsService.findAlerts(status)
   res.status(200).send(alerts)
-  // get alerts
 })
 
 router.get('/:id/', async (req, res) => {
@@ -38,7 +37,6 @@ router.get('/:id/', async (req, res) => {
     res.status(400).send()
     return
   }
-  //TODO: Erreur 400
   try {
     let alert = await alertsService.findById(id)
     res.status(200).send(alert)

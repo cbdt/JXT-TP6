@@ -39,8 +39,8 @@ const createAlert = (body) => {
   })
 }
 
-const findAlerts = (withStatus) => {
-  return Alert.find({status: { "$in": withStatus }})
+const findAlerts = (status) => {
+  return Alert.find({status: { "$in": status }})
 }
 
 const findById = (id) => {
