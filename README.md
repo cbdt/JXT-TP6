@@ -1,3 +1,5 @@
+# JXT TP6 - Clément Baudet & Kévin Philip
+
 ## Getting Started
 
 This section provides a quick start guide on how to launch the application.
